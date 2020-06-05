@@ -8,6 +8,10 @@ storeId:{
   trim:true,
   maxlength:[10,'store ID must be less than 10 characters']
 },
+address:{
+ type:String,
+ required:[true,'Please add address']
+},
 location:{
   type:{
     type: String,
