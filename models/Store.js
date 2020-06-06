@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const geocoder = require('../utils/geocoder');
 
 const StoreSchema = new mongoose.Schema({
 storeId:{
@@ -28,5 +29,18 @@ location:{
    default:Date.now
  }
 });
+
+//geolocation & create location
+StoreSchema.pre('save',async function(next) {
+ const loc = await geocoder.geocode(this.address);
+ this.location = {
+   type:'Points',
+   coordinates:[loc[0].longitude,loc[0].latitude],
+  formattedAddress:loc[0].formattedAddress
+ }
+//do not save address 
+  this.address=undefined;
+   next();
+})
 
 module.exports = mongoose.model('Store',StoreSchema);
