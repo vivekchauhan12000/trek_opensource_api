@@ -6,3 +6,5 @@ The get request to api will be free and free from signin and put request are onl
 ## The git request can be made by:
 https:www.trekapi.ai/api/all/places 
 It will give an object of formated location,longitude,latitude and much more.
+
+## So please donate for this project or help us by providing data or metadate about locations (only submit in excel sheet)
