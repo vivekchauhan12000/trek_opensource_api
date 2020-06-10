@@ -7,7 +7,7 @@ storeId:{
   required:[true,'Please add a store ID'],
   unique:true,
   trim:true,
-  maxlength:[10,'store ID must be less than 10 characters']
+  maxlength:[50,'store ID must be less than 10 characters']
 },
 address:{
  type:String,
