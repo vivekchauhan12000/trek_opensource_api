@@ -1,7 +1,7 @@
 const NodeGeocoder = require('node-geocoder');
 
 const GEOCODER_PROVIDER="mapquest"
-const GEOCODER_API_KEY="LB5831SoBJowt77doyTBwmu3rnc2FdUG"
+const GEOCODER_API_KEY="enteryours"
 
 const options = {
   provider:GEOCODER_PROVIDER,
